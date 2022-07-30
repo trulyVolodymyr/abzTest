@@ -84,7 +84,7 @@ const store = createStore({
         state.email.length > 2 &&
         state.email.length < 100
       ) {
-        state.formData.append('email', state.email.toLocaleLowerCase)
+        state.formData.append('email', state.email)
         state.emailValid = true
 
         state.emailInvalid = false
@@ -164,8 +164,6 @@ const store = createStore({
           if (data.success) {
             context.commit('updateResults', data.users)
             context.commit('updateUserAmount', 6)
-            console.log(context.state.userAmount)
-            console.log(context.state.maxUsers)
           }
           if (!data.success) {
             throw new Error('Failed to fetch data. Try again later.')
