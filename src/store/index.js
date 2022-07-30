@@ -150,7 +150,7 @@ const store = createStore({
           }
         })
         .catch(() => {
-          context.commit(updateError, true)
+          context.commit('updateError', true)
         })
     },
     //add user to api
@@ -164,13 +164,15 @@ const store = createStore({
           if (data.success) {
             context.commit('updateResults', data.users)
             context.commit('updateUserAmount', 6)
+            console.log(context.state.userAmount)
+            console.log(context.state.maxUsers)
           }
           if (!data.success) {
             throw new Error('Failed to fetch data. Try again later.')
           }
         })
         .catch(() => {
-          context.commit(updateError, true)
+          context.commit('updateError', true)
         })
     },
     //get positions from api
@@ -181,7 +183,7 @@ const store = createStore({
           context.commit('updatePositons', data.positions)
         })
         .catch(() => {
-          context.commit(updateError, true)
+          context.commit('updateError', true)
         })
     },
     //get token from api
