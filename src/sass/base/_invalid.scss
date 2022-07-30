@@ -1,0 +1,18 @@
+.invalid input {
+  border: 1px solid $c-invalid;
+  transition: all 0.5s;
+}
+
+.invalid .label {
+  color: $c-invalid;
+}
+
+.invalid .post_btn {
+  border: 2px solid $c-invalid;
+}
+
+.invalid .post_placeholder {
+  border-top: 2px solid $c-invalid;
+  border-right: 2px solid $c-invalid;
+  border-bottom: 2px solid $c-invalid;
+}

@@ -1,0 +1,60 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+
+  &_wrp {
+    width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    @media screen and (max-width: 1200px) {
+      & {
+        width: 100%;
+      }
+    }
+  }
+
+  &_logo {
+    @media screen and (max-width: 1200px) {
+      & {
+        margin: 0 0 0 60px;
+      }
+    }
+    @media screen and (max-width: 930px) {
+      & {
+        margin: 0 0 0 32px;
+      }
+    }
+    @media screen and (max-width: 730px) {
+      & {
+        margin: 0 0 0 16px;
+      }
+    }
+  }
+
+  &_btns {
+    @media screen and (max-width: 1200px) {
+      & {
+        margin: 0 60px 0 0;
+      }
+    }
+    @media screen and (max-width: 930px) {
+      & {
+        margin: 0 32px 0 0;
+      }
+    }
+    @media screen and (max-width: 730px) {
+      & {
+        margin: 0 16px 0 0;
+      }
+    }
+
+    display: flex;
+    & > .btn:nth-child(2) {
+      margin: 0 0 0 10px;
+    }
+  }
+}
